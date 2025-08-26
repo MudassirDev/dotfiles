@@ -42,3 +42,5 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 theme = tokyonight_moon
+window-decoration = none
+font-size = 14
