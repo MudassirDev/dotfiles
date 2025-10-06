@@ -23,11 +23,11 @@ font pango:monospace 13
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
-# start picom
-# exec --no-startup-id picom --config .config/picom/picom.conf -b
-
 # start polybar
 exec --no-startup-id polybar
+
+# start dunst
+exec --no-startup-id dunst
 
 # set thunar
 bindsym $mod+e exec --no-startup-id thunar
@@ -45,7 +45,7 @@ exec --no-startup-id xrdb merge ~/.Xresources
 exec --no-startup-id $HOME/.config/i3/scripts/battery_monitor.sh
 
 # set background
-exec --no-startup-id feh --bg-scale ~/Downloads/1172158.png
+exec --no-startup-id feh --bg-scale ~/.config/pictures/wallpaper.png
 
 # Set netural scrolling
 exec --no-startup-id xinput set-prop "MSHW0092:00 045E:0933 Touchpad" "libinput Natural Scrolling Enabled" 1
@@ -82,10 +82,10 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec ghostty
+bindsym $mod+Return exec kitty
 
 # start the browser
-bindsym $mod+b exec brave
+bindsym $mod+b exec firefox
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -134,7 +134,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+Shift+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -190,7 +190,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
