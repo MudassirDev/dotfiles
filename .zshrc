@@ -12,6 +12,7 @@ alias install="sudo pacman -S"
 alias sync="sudo pacman -Syy"
 alias reflector="reflector --latest 5 --sort rate --save /etc/pacman.d/mirrorlist"
 alias remove="sudo pacman -Rns"
+alias clean="yay -Scc"
 
 alias GO="cd ~/Programming/Go"
 alias JS="cd ~/Programming/JS"
