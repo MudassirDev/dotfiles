@@ -17,11 +17,10 @@ alias clean="yay -Scc"
 alias GO="cd ~/Programming/Go"
 alias JS="cd ~/Programming/JS"
 alias PYTHON="cd ~/Programming/Python"
+alias notes="cd ~/Programming/notes/ && nvim"
 
 alias editor="cd ~/.config/nvim/"
 alias fastfetch="fastfetch --logo ~/.config/pictures/Rimuru-PNG-Picture.png"
 alias scroll-fix='xinput set-prop "MSHW0092:00 045E:0933 Touchpad" "libinput Natural Scrolling Enabled" 1' # fix natural scrolling
 
 export PATH=$PATH:~/go/bin
-
-fastfetch
